@@ -1,10 +1,8 @@
 package io.javabrains;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.junit.jupiter.api.Assumptions.assumeTrue;
 import org.junit.jupiter.api.*;
 
-//@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @DisplayName("When running MathUtils")
 class MathUtilsTest {
     MathUtils mathUtils;
@@ -33,9 +31,11 @@ class MathUtilsTest {
         }
     }
 
+
     @Test
     @DisplayName("multiply method")
     void testMultiply() {
+        //assertEquals(4, mathUtils.multiply(2, 2), "Should return the right product");
         assertAll(
                 () -> assertEquals(4, mathUtils.multiply(2, 2)),
                 () -> assertEquals(0, mathUtils.multiply(2, 0)),
